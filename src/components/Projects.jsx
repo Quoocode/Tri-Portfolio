@@ -227,7 +227,7 @@ export default function Projects({ onImageClick }) {
   return (
     <section className="band" id="projects">
       <div className="wrap">
-        <p className="kicker reveal"><span className="idx">03</span>my projects</p>
+        <p className="kicker reveal"><span className="idx">02</span>my projects</p>
         <h2 className="title reveal">Stuff I put<span className="sub">on screen</span></h2>
         <p className="lead reveal">
           The work where I actually learned how to reach people - each one through something that went wrong first.

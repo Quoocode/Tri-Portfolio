@@ -10,7 +10,7 @@ export default function Resume({ onImageClick }) {
       </svg>
 
       <div className="wrap">
-        <p className="kicker reveal"><span className="idx">02</span>my resume</p>
+        <p className="kicker reveal"><span className="idx">01</span>my resume</p>
         <h2 className="title reveal">Education<span className="sub">&amp; achievements</span></h2>
         <p className="lead reveal">Mostly a math kid who kept saying yes to things outside the syllabus.</p>
 

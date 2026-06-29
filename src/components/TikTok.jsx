@@ -48,7 +48,7 @@ export default function TikTok() {
   return (
     <section className="band tiktok-band" id="tiktok">
       <div className="wrap" style={{ position: 'relative', zIndex: 2 }}>
-        <p className="kicker reveal"><span className="idx">01</span>the flagship</p>
+        <p className="kicker reveal"><span className="idx">03</span>the flagship</p>
 
         <h2 className="title reveal">
           Making Math<span className="sub">Go Viral.</span>
