@@ -11,6 +11,7 @@ export default function Nav() {
           <a href="#resume">My Resume</a>
           <a href="#projects">My Projects</a>
           <a href="#tiktok">TikTok</a>
+          <a href="#community">Community</a>
           <a href="#rhythm">My Rhythm</a>
           <a href="#why">Why RMIT</a>
         </div>

@@ -2137,11 +2137,11 @@ html.lenis, html.lenis body {
 .tiktok-frames--six {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(2.2rem, 4.5vw, 3rem);
-  max-width: 780px;
+  gap: clamp(2.5rem, 5vw, 3.4rem);
+  max-width: 820px;
   align-items: start;
-  margin-top: clamp(2rem, 5vw, 3rem);
-  margin-bottom: clamp(3.8rem, 6vw, 5rem);
+  margin-top: clamp(2.4rem, 5vw, 3.4rem);
+  margin-bottom: clamp(4.4rem, 7vw, 5.6rem);
 }
 
 .tiktok-frames--six .frame {
@@ -2163,10 +2163,10 @@ html.lenis, html.lenis body {
   gap: .25rem;
   color: var(--purple);
   font-family: var(--mark);
-  font-size: clamp(.88rem, 1.55vw, 1.18rem);
+  font-size: clamp(.82rem, 1.35vw, 1.08rem);
   line-height: 1;
   white-space: nowrap;
-  filter: drop-shadow(2px 2px 0 rgba(255, 255, 255, .9));
+  filter: drop-shadow(2px 2px 0 rgba(255, 255, 255, .92));
 }
 
 .tiktok-img-note span {
@@ -2177,6 +2177,7 @@ html.lenis, html.lenis body {
   width: 54px;
   height: 40px;
   overflow: visible;
+  flex: 0 0 auto;
 }
 
 .note-arrow path {
@@ -2187,31 +2188,33 @@ html.lenis, html.lenis body {
   stroke-linejoin: round;
 }
 
-/* Top-left tile: math hooks */
+/* Top-left tile: ANH LON TRI VO */
 .note-top-left {
-  top: -2rem;
-  left: -1.1rem;
+  top: -2.15rem;
+  left: -1.05rem;
 }
 
 .note-top-left .note-arrow {
   transform: rotate(18deg);
 }
 
-/* Top-middle tile: school chaos */
+/* Top-middle tile: SCHOOL'S OFFICIAL TIKTOK */
 .note-top-right {
-  top: -2rem;
-  right: -1.1rem;
+  top: -2.25rem;
+  left: 7rem;
+  right: auto;
   flex-direction: row-reverse;
+  font-size: clamp(.76rem, 1.2vw, 1rem);
 }
 
 .note-top-right .note-arrow {
   transform: scaleX(-1) rotate(18deg);
 }
 
-/* Top-right tile: real comments, pushed outward */
+/* Top-right tile: CLASS CHAOS */
 .note-right {
-  top: 42%;
-  right: -11.5rem;
+  top: 40%;
+  right: -9.2rem;
   flex-direction: row-reverse;
 }
 
@@ -2219,35 +2222,37 @@ html.lenis, html.lenis body {
   transform: scaleX(-1) rotate(-8deg);
 }
 
-/* Bottom-left tile: club energy, pushed outward */
+/* Bottom-left tile: MY PERSONA AT SCHOOL */
 .note-left {
-  top: 42%;
-  left: -9.8rem;
+  top: 48%;
+  left: -14rem;
+  font-size: clamp(.76rem, 1.2vw, 1rem);
 }
 
 .note-left .note-arrow {
   transform: rotate(-8deg);
 }
 
-/* Bottom-middle tile: edit rhythm, below the image and pointing upward */
+/* Bottom-middle tile: OCEAN EDUCATION, below the image and pointing upward */
 .note-bottom-left {
-  bottom: -2.8rem;
-  left: .2rem;
+  bottom: -3.25rem;
+  left: .35rem;
 }
 
-.note-bottom-left .note-arrow {
+.note-bottom-right .note-arrow {
   transform: rotate(-96deg);
   transform-origin: center;
 }
 
-/* Bottom-right tile: visual proof, below the image and pointing upward */
+/* Bottom-right tile: MY PROFESSIONAL CAREER, below the image and pointing upward */
 .note-bottom-right {
-  bottom: -2.8rem;
-  right: .2rem;
+  bottom: -3.25rem;
+  right: -.35rem;
   flex-direction: row-reverse;
+  font-size: clamp(.76rem, 1.2vw, 1rem);
 }
 
-.note-bottom-right .note-arrow {
+.note-bottom-left .note-arrow {
   transform: scaleX(-1) rotate(-96deg);
   transform-origin: center;
 }
@@ -2262,20 +2267,29 @@ html.lenis, html.lenis body {
   .tiktok-frames--six {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     max-width: 540px;
-    margin-bottom: 4.6rem;
+    margin-bottom: 4.8rem;
   }
 
+  .note-top-left,
+  .note-top-right,
   .note-right,
-  .note-left {
+  .note-left,
+  .note-bottom-left,
+  .note-bottom-right {
     top: auto;
     left: .4rem;
     right: auto;
-    bottom: -2.2rem;
+    bottom: -2.35rem;
     flex-direction: row;
+    font-size: 1rem;
   }
 
+  .note-top-left .note-arrow,
+  .note-top-right .note-arrow,
   .note-right .note-arrow,
-  .note-left .note-arrow {
+  .note-left .note-arrow,
+  .note-bottom-left .note-arrow,
+  .note-bottom-right .note-arrow {
     transform: rotate(-42deg);
   }
 }
@@ -2284,7 +2298,7 @@ html.lenis, html.lenis body {
   .tiktok-frames--six {
     grid-template-columns: 1fr;
     max-width: 280px;
-    margin-bottom: 4.6rem;
+    margin-bottom: 4.8rem;
   }
 
   .tiktok-img-note {
@@ -2300,7 +2314,7 @@ html.lenis, html.lenis body {
     top: auto;
     left: .4rem;
     right: auto;
-    bottom: -2.1rem;
+    bottom: -2.25rem;
     flex-direction: row;
   }
 
@@ -2311,5 +2325,142 @@ html.lenis, html.lenis body {
   .note-bottom-left .note-arrow,
   .note-bottom-right .note-arrow {
     transform: rotate(-42deg);
+  }
+}
+/* ===================== COMMUNITY INITIATIVE ===================== */
+.community-band {
+  background: #fff;
+}
+
+.community-lead {
+  max-width: 66ch;
+}
+
+.community-highlight {
+  margin-top: 1.4rem;
+  font-family: var(--disp);
+  font-weight: 900;
+  font-size: clamp(1.05rem, 1rem + 1vw, 1.45rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.community-highlight b {
+  color: var(--purple);
+  font-weight: 900;
+}
+
+.community-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.2rem);
+  margin-top: clamp(2.2rem, 5vw, 3rem);
+  padding-top: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.community-tile {
+  position: relative;
+  min-width: 0;
+}
+
+.community-frame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+}
+
+.community-frame .ph img,
+.community-frame img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.community-note {
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  color: var(--purple);
+  font-family: var(--mark);
+  font-size: clamp(.9rem, 1.35vw, 1.1rem);
+  line-height: 1;
+  white-space: nowrap;
+  filter: drop-shadow(2px 2px 0 rgba(255,255,255,.92));
+}
+
+.community-note span {
+  transform: rotate(-4deg);
+}
+
+.community-note-arrow {
+  width: 54px;
+  height: 40px;
+  overflow: visible;
+}
+
+.community-note-arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* xen kẽ trên */
+.community-note-top {
+  top: -2.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.community-note-top .community-note-arrow {
+  transform: rotate(26deg);
+}
+
+/* xen kẽ dưới */
+.community-note-bottom {
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: row-reverse;
+}
+
+.community-note-bottom .community-note-arrow {
+  transform: scaleX(-1) rotate(-92deg);
+  transform-origin: center;
+}
+
+@media (max-width: 1100px) {
+  .community-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 3.5rem;
+    max-width: 760px;
+  }
+}
+
+@media (max-width: 680px) {
+  .community-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 3.5rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .community-highlight {
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 460px) {
+  .community-strip {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    row-gap: 3.2rem;
+  }
+
+  .community-note {
+    font-size: 1rem;
   }
 }

@@ -4,6 +4,7 @@ import About from './components/About';
 import TikTok from './components/TikTok';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import CommunityInitiative from './components/CommunityInitiative';
 import Rhythm from './components/Rhythm';
 import WhyRMIT from './components/WhyRMIT';
 import MarqueeDivider from './components/MarqueeDivider';
@@ -147,7 +148,16 @@ export default function App() {
 
   /* Active nav links + scroll progress bar + scroll cue */
   useEffect(() => {
-    const ids = ['about', 'resume', 'projects', 'tiktok', 'rhythm', 'why'];
+    const ids = [
+      'about',
+      'resume',
+      'projects',
+      'tiktok',
+      'community',
+      'rhythm',
+      'why'
+    ];
+
     const links = document.querySelectorAll('.nav__links a');
     const progress = document.getElementById('scroll-progress');
     const cue = document.getElementById('scroll-cue');
@@ -263,6 +273,7 @@ export default function App() {
       <Resume onImageClick={handleImageClick} />
       <Projects onImageClick={handleImageClick} />
       <TikTok />
+      <CommunityInitiative onImageClick={handleImageClick} />
       <MarqueeDivider />
       <Rhythm />
       <WhyRMIT />

@@ -7,49 +7,49 @@ const TIKTOK_ITEMS = [
     id: 1,
     image: 'images/tiktok-1.webp',
     label: 'tiktok 1',
-    note: 'math hooks',
+    note: 'Anh Lon Tri Vo',
     noteClass: 'note-top-left',
-    href: ''
+    href: 'https://www.tiktok.com/@anhlontrivo'
   },
   {
     id: 2,
     image: 'images/tiktok-2.webp',
     label: 'tiktok 2',
-    note: 'school chaos',
+    note: "School's official TikTok",
     noteClass: 'note-top-right',
-    href: ''
+    href: 'https://www.tiktok.com/@ptnk.vnuhcm'
   },
   {
     id: 3,
     image: 'images/tiktok-3.webp',
     label: 'tiktok 3',
-    note: 'real comments',
+    note: 'Class Chaos',
     noteClass: 'note-right',
-    href: ''
+    href: 'https://www.tiktok.com/@telono2326'
   },
   {
     id: 4,
     image: 'images/tiktok-4.webp',
     label: 'tiktok 4',
-    note: 'club energy',
+    note: 'My persona at school',
     noteClass: 'note-left',
-    href: ''
+    href: 'https://www.tiktok.com/@anhlontaikhieu'
   },
   {
     id: 5,
     image: 'images/tiktok-5.webp',
     label: 'tiktok 5',
-    note: 'edit rhythm',
+    note: 'Ocean Education',
     noteClass: 'note-bottom-left',
-    href: ''
+    href: 'https://www.tiktok.com/@oceaneducationgovap'
   },
   {
     id: 6,
     image: 'images/tiktok-6.webp',
     label: 'tiktok 6',
-    note: 'visual proof',
+    note: 'my professional career',
     noteClass: 'note-bottom-right',
-    href: ''
+    href: 'https://www.tiktok.com/@trivooed'
   }
 ];
 
@@ -65,7 +65,7 @@ export default function TikTok() {
     <section className="band tiktok-band" id="tiktok">
       <div className="wrap" style={{ position: 'relative', zIndex: 2 }}>
         <p className="kicker reveal">
-          <span className="idx">03</span>the flagship
+          <span className="idx">03</span>My Tiktok
         </p>
 
         <h2 className="title reveal">
@@ -199,7 +199,7 @@ export default function TikTok() {
           rel="noopener noreferrer"
           className="tiktok-cta reveal"
         >
-          watch on TikTok → @anhlontrivo
+          CHECK OUT MY TIKTOK → @anhlontrivo
         </a>
 
         <p className="tiktok-lesson reveal">

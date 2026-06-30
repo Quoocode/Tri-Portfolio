@@ -53,7 +53,7 @@ export default function Rhythm() {
     <section className="band alt" id="rhythm">
       <div className="wrap">
         <p className="kicker reveal">
-          <span className="idx">05</span>my rhythm
+          <span className="idx">04</span>my rhythm
         </p>
 
         <h2 className="title reveal">
