@@ -1,45 +1,61 @@
+import { useState } from 'react';
 import CountUp from './CountUp';
+import TikTokDataMap from './TikTokDataMap';
 
 const TIKTOK_ITEMS = [
   {
     id: 1,
     image: 'images/tiktok-1.webp',
     label: 'tiktok 1',
+    note: 'math hooks',
+    noteClass: 'note-top-left',
     href: ''
   },
   {
     id: 2,
     image: 'images/tiktok-2.webp',
     label: 'tiktok 2',
+    note: 'school chaos',
+    noteClass: 'note-top-right',
     href: ''
   },
   {
     id: 3,
     image: 'images/tiktok-3.webp',
     label: 'tiktok 3',
+    note: 'real comments',
+    noteClass: 'note-right',
     href: ''
   },
   {
     id: 4,
     image: 'images/tiktok-4.webp',
     label: 'tiktok 4',
+    note: 'club energy',
+    noteClass: 'note-left',
     href: ''
   },
   {
     id: 5,
     image: 'images/tiktok-5.webp',
     label: 'tiktok 5',
+    note: 'edit rhythm',
+    noteClass: 'note-bottom-left',
     href: ''
   },
   {
     id: 6,
     image: 'images/tiktok-6.webp',
     label: 'tiktok 6',
+    note: 'visual proof',
+    noteClass: 'note-bottom-right',
     href: ''
   }
 ];
 
 export default function TikTok() {
+  const [showDataMap, setShowDataMap] = useState(false);
+
   const handleLinkClick = (url) => {
     if (!url) return;
     window.open(url, '_blank', 'noopener noreferrer');
@@ -48,7 +64,9 @@ export default function TikTok() {
   return (
     <section className="band tiktok-band" id="tiktok">
       <div className="wrap" style={{ position: 'relative', zIndex: 2 }}>
-        <p className="kicker reveal"><span className="idx">03</span>the flagship</p>
+        <p className="kicker reveal">
+          <span className="idx">03</span>the flagship
+        </p>
 
         <h2 className="title reveal">
           Making Math<span className="sub">Go Viral.</span>
@@ -60,90 +78,119 @@ export default function TikTok() {
           making people care, fast.
         </p>
 
-        <div className="tiktok-stats reveal-stagger reveal" data-countgroup="true">
-          <div className="tstat">
-            <CountUp target={13.4} suffix="M+" />
-            <span className="lbl">video views</span>
+        <div className="tiktok-proof reveal">
+          <div className="tiktok-proof__head">
+            <div>
+              <h3>
+                {showDataMap ? 'the data behind the growth' : 'the headline numbers'}
+              </h3>
+
+              <p>
+                {showDataMap
+                  ? 'A handmade map built from the TikTok overview data.'
+                  : 'The fast-read version of the channel.'}
+              </p>
+            </div>
+
+            <button
+              type="button"
+              className="tiktok-switch-btn"
+              onClick={() => setShowDataMap((prev) => !prev)}
+            >
+              {showDataMap ? '← back to stats' : 'view data map →'}
+            </button>
           </div>
 
-          <div className="tstat">
-            <CountUp target={15} suffix="K+" />
-            <span className="lbl">followers</span>
-          </div>
+          {showDataMap ? (
+            <TikTokDataMap />
+          ) : (
+            <div className="tiktok-stats" data-countgroup="true">
+              <div className="tstat">
+                <CountUp target={13.4} suffix="M+" />
+                <span className="lbl">video views</span>
+              </div>
 
-          <div className="tstat">
-            <CountUp target={800} suffix="K+" />
-            <span className="lbl">likes</span>
-          </div>
+              <div className="tstat">
+                <CountUp target={15} suffix="K+" />
+                <span className="lbl">followers</span>
+              </div>
 
-          <div className="tstat">
-            <CountUp target={100} suffix="K+" />
-            <span className="lbl">hrs watched</span>
-          </div>
+              <div className="tstat">
+                <CountUp target={800} suffix="K+" />
+                <span className="lbl">likes</span>
+              </div>
+
+              <div className="tstat">
+                <CountUp target={100} suffix="K+" />
+                <span className="lbl">hrs watched</span>
+              </div>
+            </div>
+          )}
         </div>
 
-        <div
-          className="tiktok-frames reveal-stagger reveal"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-            gap: '1.2rem',
-            maxWidth: '720px',
-            alignItems: 'start'
-          }}
-        >
+        <div className="tiktok-frames tiktok-frames--six reveal-stagger reveal">
           {TIKTOK_ITEMS.map((item, index) => {
-            const frameColors = ['pink r-2', 'blue r2', 'green r-3', 'yellow r2', 'pink r-2', 'blue r2'];
-            const fpClasses = ['fp1', 'fp3', 'fp2', 'fp4', 'fp1', 'fp3'];
+            const frameColors = [
+              'pink r-2',
+              'blue r2',
+              'green r-3',
+              'yellow r2',
+              'pink r-2',
+              'blue r2'
+            ];
+
+            const fpClasses = [
+              'fp1',
+              'fp3',
+              'fp2',
+              'fp4',
+              'fp1',
+              'fp3'
+            ];
 
             return (
-              <div
-                key={item.id}
-                className={`frame ${frameColors[index]}`}
-                onClick={() => handleLinkClick(item.href)}
-                style={{
-                  cursor: item.href ? 'pointer' : 'default',
-                  width: '100%',
-                  aspectRatio: '1 / 1'
-                }}
-              >
-                <div className={`ph ${fpClasses[index]}`}>
-                  <img
-                    src={item.image}
-                    alt={item.label}
-                    loading="lazy"
-                    onError={(e) => e.target.remove()}
-                    style={{
-                      objectFit: 'cover',
-                      objectPosition: 'center'
-                    }}
-                  />
+              <div className="tiktok-tile" key={item.id}>
+                <div
+                  className={`frame ${frameColors[index]}`}
+                  onClick={() => handleLinkClick(item.href)}
+                  style={{
+                    cursor: item.href ? 'pointer' : 'default',
+                    width: '100%',
+                    aspectRatio: '1 / 1'
+                  }}
+                >
+                  <div className={`ph ${fpClasses[index]}`}>
+                    <img
+                      src={item.image}
+                      alt={item.label}
+                      loading="lazy"
+                      onError={(e) => e.target.remove()}
+                      style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center'
+                      }}
+                    />
 
-                  <span>{item.label}</span>
+                    <span>{item.label}</span>
 
-                  {item.href && (
-                    <div className="ext-badge" aria-hidden="true">
-                      ↗
-                    </div>
-                  )}
+                    {item.href && (
+                      <div className="ext-badge" aria-hidden="true">
+                        ↗
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <div className={`tiktok-img-note ${item.noteClass}`}>
+                  <span>{item.note}</span>
+
+                  <svg className="note-arrow" viewBox="0 0 70 50" aria-hidden="true">
+                    <path d="M7 8 C 28 4, 48 15, 57 34 M57 34 L 47 30 M57 34 L 53 24" />
+                  </svg>
                 </div>
               </div>
             );
           })}
-
-          <span
-            className="anno purple tiktok-anno"
-            style={{
-              gridColumn: '1 / -1',
-              justifySelf: 'end',
-              marginTop: '0.4rem'
-            }}
-          >
-            real videos{' '}
-            <svg className="arrow" viewBox="0 0 40 40" aria-hidden="true">
-              <path d="M6 6 C 20 8, 32 16, 30 32 M30 32 L 36 24 M30 32 L 22 28" />
-            </svg>
-          </span>
         </div>
 
         <a

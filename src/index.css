@@ -1744,3 +1744,572 @@ html.lenis, html.lenis body {
     max-height: 7rem;
   }
 }
+.tiktok-proof {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  border: 3px solid var(--ink);
+  border-radius: 16px;
+  background: #fff;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  box-shadow: 9px 10px 0 rgba(26, 26, 31, .14);
+}
+
+.tiktok-proof__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.tiktok-proof__head h3 {
+  font-family: var(--mark);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.tiktok-proof__head p {
+  margin: .35rem 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+  font-weight: 600;
+}
+
+.tiktok-switch-btn {
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--ink);
+  font-family: var(--ui);
+  font-weight: 800;
+  font-size: .74rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .55rem .95rem;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 4px 5px 0 rgba(26, 26, 31, .16);
+  transition: transform .2s var(--bounce), background .2s, color .2s;
+}
+
+.tiktok-switch-btn:hover {
+  background: var(--pink);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.tiktok-proof .tiktok-stats {
+  margin-top: 1rem;
+}
+
+.data-map {
+  margin-top: .8rem;
+}
+
+.data-map__copy h3 {
+  font-family: var(--disp);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.data-map__copy p {
+  margin: .5rem 0 1rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.data-map__svg-wrap {
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background:
+    radial-gradient(rgba(26, 26, 31, .055) 1px, transparent 1px),
+    #fff;
+  background-size: 18px 18px;
+  padding: .8rem;
+  overflow: hidden;
+}
+
+.data-map__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.data-map__axis {
+  stroke: var(--ink);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.data-map__line {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(4px 5px 0 rgba(26, 26, 31, .12));
+}
+
+.data-map__bubble {
+  fill: var(--pink);
+  stroke: var(--ink);
+  stroke-width: 3;
+  opacity: .78;
+}
+
+.data-map__bar {
+  fill: var(--lime);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  opacity: .9;
+}
+
+.data-map__label {
+  font-family: var(--mark);
+  fill: var(--violet);
+  font-size: 22px;
+}
+
+.data-map__insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+.data-map__insights div {
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: #fff;
+  padding: .9rem;
+  box-shadow: 5px 6px 0 rgba(26, 26, 31, .12);
+}
+
+.data-map__insights b {
+  display: block;
+  font-family: var(--disp);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: .9;
+  color: var(--purple);
+}
+
+.data-map__insights span {
+  display: block;
+  margin-top: .4rem;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 680px) {
+  .tiktok-proof__head {
+    flex-direction: column;
+  }
+
+  .tiktok-switch-btn {
+    align-self: flex-start;
+  }
+
+  .data-map__insights {
+    grid-template-columns: 1fr;
+  }
+}
+.data-map {
+  margin-top: .8rem;
+}
+
+.data-map__copy h3 {
+  font-family: var(--disp);
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1;
+  margin: 0;
+}
+
+.data-map__copy p {
+  margin: .5rem 0 1rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.data-map__chart-shell {
+  position: relative;
+}
+
+.data-map__svg-wrap {
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background:
+    radial-gradient(rgba(26, 26, 31, .055) 1px, transparent 1px),
+    #fff;
+  background-size: 18px 18px;
+  padding: .8rem;
+  overflow: hidden;
+}
+
+.data-map__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.data-map__grid {
+  stroke: rgba(26, 26, 31, .12);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 10;
+}
+
+.data-map__axis {
+  stroke: var(--ink);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.data-map__line {
+  fill: none;
+  stroke: var(--purple);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(4px 5px 0 rgba(26, 26, 31, .12));
+}
+
+.data-map__bar {
+  fill: var(--lime);
+  stroke: var(--ink);
+  stroke-width: 1.5;
+  opacity: .92;
+}
+
+.data-map__point {
+  fill: var(--pink);
+  stroke: var(--ink);
+  stroke-width: 3;
+  opacity: .92;
+}
+
+.data-map__point--active {
+  fill: #ff82b8;
+  stroke-width: 4;
+}
+
+.data-map__hover-line {
+  stroke: rgba(26, 26, 31, .26);
+  stroke-width: 2;
+  stroke-dasharray: 6 8;
+}
+
+.data-map__label {
+  font-family: var(--mark);
+  fill: var(--violet);
+  font-size: 22px;
+}
+
+.data-map__tick-line {
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+
+.data-map__tick-label {
+  font-family: var(--ui);
+  fill: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.data-map__tooltip {
+  position: absolute;
+  z-index: 20;
+  min-width: 220px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 7px 8px 0 rgba(26, 26, 31, .16);
+  padding: .7rem .8rem;
+  pointer-events: none;
+}
+
+.data-map__tooltip-date {
+  font-family: var(--disp);
+  font-size: .95rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: .55rem;
+}
+
+.data-map__tooltip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .45rem .75rem;
+}
+
+.data-map__tooltip-grid div:last-child {
+  grid-column: 1 / -1;
+}
+
+.data-map__tooltip-grid span {
+  display: block;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.data-map__tooltip-grid b {
+  display: block;
+  margin-top: .1rem;
+  font-size: .95rem;
+  line-height: 1.1;
+  color: var(--purple);
+  font-family: var(--disp);
+  font-weight: 900;
+}
+
+.data-map__insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+  margin-top: 1rem;
+}
+
+.data-map__insights div {
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: #fff;
+  padding: .9rem;
+  box-shadow: 5px 6px 0 rgba(26, 26, 31, .12);
+}
+
+.data-map__insights b {
+  display: block;
+  font-family: var(--disp);
+  font-weight: 900;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: .9;
+  color: var(--purple);
+}
+
+.data-map__insights span {
+  display: block;
+  margin-top: .4rem;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .data-map__tick-label {
+    font-size: 11px;
+  }
+
+  .data-map__tooltip {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 680px) {
+  .data-map__tooltip {
+    display: none;
+  }
+
+  .data-map__insights {
+    grid-template-columns: 1fr;
+  }
+
+  .data-map__tick-label {
+    font-size: 10px;
+  }
+}
+
+/* ===================== TIKTOK 6-TILE NOTES ===================== */
+/* Overrides the default .tiktok-frames layout for the 6 square TikTok tiles. */
+.tiktok-frames--six {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(2.2rem, 4.5vw, 3rem);
+  max-width: 780px;
+  align-items: start;
+  margin-top: clamp(2rem, 5vw, 3rem);
+  margin-bottom: clamp(3.8rem, 6vw, 5rem);
+}
+
+.tiktok-frames--six .frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.tiktok-tile {
+  position: relative;
+  min-width: 0;
+}
+
+.tiktok-img-note {
+  position: absolute;
+  z-index: 20;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  color: var(--purple);
+  font-family: var(--mark);
+  font-size: clamp(.88rem, 1.55vw, 1.18rem);
+  line-height: 1;
+  white-space: nowrap;
+  filter: drop-shadow(2px 2px 0 rgba(255, 255, 255, .9));
+}
+
+.tiktok-img-note span {
+  transform: rotate(-4deg);
+}
+
+.note-arrow {
+  width: 54px;
+  height: 40px;
+  overflow: visible;
+}
+
+.note-arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Top-left tile: math hooks */
+.note-top-left {
+  top: -2rem;
+  left: -1.1rem;
+}
+
+.note-top-left .note-arrow {
+  transform: rotate(18deg);
+}
+
+/* Top-middle tile: school chaos */
+.note-top-right {
+  top: -2rem;
+  right: -1.1rem;
+  flex-direction: row-reverse;
+}
+
+.note-top-right .note-arrow {
+  transform: scaleX(-1) rotate(18deg);
+}
+
+/* Top-right tile: real comments, pushed outward */
+.note-right {
+  top: 42%;
+  right: -11.5rem;
+  flex-direction: row-reverse;
+}
+
+.note-right .note-arrow {
+  transform: scaleX(-1) rotate(-8deg);
+}
+
+/* Bottom-left tile: club energy, pushed outward */
+.note-left {
+  top: 42%;
+  left: -9.8rem;
+}
+
+.note-left .note-arrow {
+  transform: rotate(-8deg);
+}
+
+/* Bottom-middle tile: edit rhythm, below the image and pointing upward */
+.note-bottom-left {
+  bottom: -2.8rem;
+  left: .2rem;
+}
+
+.note-bottom-left .note-arrow {
+  transform: rotate(-96deg);
+  transform-origin: center;
+}
+
+/* Bottom-right tile: visual proof, below the image and pointing upward */
+.note-bottom-right {
+  bottom: -2.8rem;
+  right: .2rem;
+  flex-direction: row-reverse;
+}
+
+.note-bottom-right .note-arrow {
+  transform: scaleX(-1) rotate(-96deg);
+  transform-origin: center;
+}
+
+/* Give the notes under row 2 real breathing room before the CTA button. */
+.tiktok-frames--six + .tiktok-cta {
+  margin-top: 0;
+}
+
+/* Mobile/tablet: keep notes inside the readable flow so they do not spill off-screen. */
+@media (max-width: 760px) {
+  .tiktok-frames--six {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 540px;
+    margin-bottom: 4.6rem;
+  }
+
+  .note-right,
+  .note-left {
+    top: auto;
+    left: .4rem;
+    right: auto;
+    bottom: -2.2rem;
+    flex-direction: row;
+  }
+
+  .note-right .note-arrow,
+  .note-left .note-arrow {
+    transform: rotate(-42deg);
+  }
+}
+
+@media (max-width: 460px) {
+  .tiktok-frames--six {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+    margin-bottom: 4.6rem;
+  }
+
+  .tiktok-img-note {
+    font-size: 1rem;
+  }
+
+  .note-top-left,
+  .note-top-right,
+  .note-right,
+  .note-left,
+  .note-bottom-left,
+  .note-bottom-right {
+    top: auto;
+    left: .4rem;
+    right: auto;
+    bottom: -2.1rem;
+    flex-direction: row;
+  }
+
+  .note-top-left .note-arrow,
+  .note-top-right .note-arrow,
+  .note-right .note-arrow,
+  .note-left .note-arrow,
+  .note-bottom-left .note-arrow,
+  .note-bottom-right .note-arrow {
+    transform: rotate(-42deg);
+  }
+}
