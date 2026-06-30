@@ -1598,7 +1598,6 @@ html.lenis, html.lenis body {
   transform: scale(1.1) rotate(15deg);
   background: var(--pink);
 }
-
 .proj-cta {
   font-family: var(--ui);
   font-weight: 700;
@@ -1614,35 +1613,48 @@ html.lenis, html.lenis body {
   color: var(--pink);
   transform: translateY(-2px);
 }
+
+/* ===================== COMMENT SHUFFLE ===================== */
 .comment-board {
   margin-top: clamp(2.4rem, 5vw, 3.2rem);
+  padding: clamp(.9rem, 2vw, 1.25rem);
 }
 
-.comment-board__hd {
+.comment-board__hd,
+.comment-board .board__hd {
   justify-content: space-between;
+  align-items: center;
+  gap: .65rem;
+  margin-bottom: .65rem;
+  font-size: clamp(1rem, 1.7vw, 1.18rem);
 }
 
 .comment-board__hd > div {
   display: flex;
   align-items: center;
-  gap: .5rem;
+  gap: .35rem;
   flex-wrap: wrap;
 }
 
+.comment-board__hd .tag,
+.comment-board .tag {
+  font-size: .68rem;
+}
+
 .comment-shuffle-btn {
-  border: 3px solid var(--ink);
+  border: 2.5px solid var(--ink);
   border-radius: 999px;
   background: var(--yellow);
   color: var(--ink);
   font-family: var(--ui);
   font-weight: 800;
-  font-size: .74rem;
+  font-size: .68rem;
   letter-spacing: .06em;
   text-transform: uppercase;
-  padding: .55rem .95rem;
+  padding: .42rem .78rem;
   cursor: pointer;
   white-space: nowrap;
-  box-shadow: 4px 5px 0 rgba(26, 26, 31, .16);
+  box-shadow: 3px 4px 0 rgba(26, 26, 31, .14);
   transition: transform .2s var(--bounce), background .2s, color .2s;
 }
 
@@ -1655,37 +1667,38 @@ html.lenis, html.lenis body {
 .comment-list {
   display: flex;
   flex-direction: column;
-  gap: .8rem;
-  margin-top: 1rem;
+  gap: .45rem;
+  margin-top: .65rem;
 }
 
 .comment-card {
   position: relative;
   width: 100%;
-  border: 3px solid var(--ink);
-  border-radius: 12px;
+  border: 2.5px solid var(--ink);
+  border-radius: 10px;
   background: #fff;
-  padding: .55rem 3rem .55rem .55rem;
+  padding: .32rem 2.6rem .32rem .32rem;
   cursor: pointer;
   overflow: hidden;
-  box-shadow: 5px 6px 0 rgba(26, 26, 31, .12);
+  box-shadow: 4px 5px 0 rgba(26, 26, 31, .10);
   transition: transform .2s var(--bounce), box-shadow .2s var(--ease), background .2s;
 }
 
 .comment-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 7px 8px 0 rgba(26, 26, 31, .18);
+  transform: translateY(-2px);
+  box-shadow: 5px 6px 0 rgba(26, 26, 31, .16);
   background: #FFF0F7;
 }
 
 .comment-card__media {
   width: 100%;
-  min-height: 4.2rem;
+  min-height: 0;
+  height: clamp(4.5rem, 8vw, 5.6rem);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   background: #fff;
-  border-radius: 8px;
+  border-radius: 7px;
   overflow: hidden;
 }
 
@@ -1700,19 +1713,20 @@ html.lenis, html.lenis body {
 .comment-card img {
   display: block;
   width: 100%;
-  max-height: 8.5rem;
+  height: 100%;
+  max-height: none;
   object-fit: contain;
   object-position: left center;
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 .comment-card__arrow {
   position: absolute;
   top: 50%;
-  right: .75rem;
+  right: .58rem;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: var(--ink);
   color: #fff;
@@ -1720,13 +1734,14 @@ html.lenis, html.lenis body {
   place-items: center;
   font-family: var(--ui);
   font-weight: 800;
-  font-size: .95rem;
+  font-size: .82rem;
   border: 2px solid #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
 }
 
 @media (max-width: 680px) {
-  .comment-board__hd {
+  .comment-board__hd,
+  .comment-board .board__hd {
     align-items: flex-start;
   }
 
@@ -1740,10 +1755,12 @@ html.lenis, html.lenis body {
     margin-top: .4rem;
   }
 
-  .comment-card img {
-    max-height: 7rem;
+  .comment-card__media {
+    height: 4.2rem;
   }
 }
+
+/* ===================== TIKTOK PROOF + DATA MAP ===================== */
 .tiktok-proof {
   margin-top: clamp(2rem, 4vw, 3rem);
   border: 3px solid var(--ink);
@@ -1821,124 +1838,6 @@ html.lenis, html.lenis body {
   font-weight: 500;
 }
 
-.data-map__svg-wrap {
-  border: 3px solid var(--ink);
-  border-radius: 14px;
-  background:
-    radial-gradient(rgba(26, 26, 31, .055) 1px, transparent 1px),
-    #fff;
-  background-size: 18px 18px;
-  padding: .8rem;
-  overflow: hidden;
-}
-
-.data-map__svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.data-map__axis {
-  stroke: var(--ink);
-  stroke-width: 4;
-  stroke-linecap: round;
-}
-
-.data-map__line {
-  fill: none;
-  stroke: var(--purple);
-  stroke-width: 7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  filter: drop-shadow(4px 5px 0 rgba(26, 26, 31, .12));
-}
-
-.data-map__bubble {
-  fill: var(--pink);
-  stroke: var(--ink);
-  stroke-width: 3;
-  opacity: .78;
-}
-
-.data-map__bar {
-  fill: var(--lime);
-  stroke: var(--ink);
-  stroke-width: 1.5;
-  opacity: .9;
-}
-
-.data-map__label {
-  font-family: var(--mark);
-  fill: var(--violet);
-  font-size: 22px;
-}
-
-.data-map__insights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .8rem;
-  margin-top: 1rem;
-}
-
-.data-map__insights div {
-  border: 3px solid var(--ink);
-  border-radius: 14px;
-  background: #fff;
-  padding: .9rem;
-  box-shadow: 5px 6px 0 rgba(26, 26, 31, .12);
-}
-
-.data-map__insights b {
-  display: block;
-  font-family: var(--disp);
-  font-weight: 900;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  line-height: .9;
-  color: var(--purple);
-}
-
-.data-map__insights span {
-  display: block;
-  margin-top: .4rem;
-  color: var(--muted);
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
-@media (max-width: 680px) {
-  .tiktok-proof__head {
-    flex-direction: column;
-  }
-
-  .tiktok-switch-btn {
-    align-self: flex-start;
-  }
-
-  .data-map__insights {
-    grid-template-columns: 1fr;
-  }
-}
-.data-map {
-  margin-top: .8rem;
-}
-
-.data-map__copy h3 {
-  font-family: var(--disp);
-  font-weight: 900;
-  text-transform: uppercase;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  line-height: 1;
-  margin: 0;
-}
-
-.data-map__copy p {
-  margin: .5rem 0 1rem;
-  color: var(--muted);
-  font-weight: 500;
-}
-
 .data-map__chart-shell {
   position: relative;
 }
@@ -1988,7 +1887,8 @@ html.lenis, html.lenis body {
   opacity: .92;
 }
 
-.data-map__point {
+.data-map__point,
+.data-map__bubble {
   fill: var(--pink);
   stroke: var(--ink);
   stroke-width: 3;
@@ -2074,40 +1974,6 @@ html.lenis, html.lenis body {
   font-weight: 900;
 }
 
-.data-map__insights {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .8rem;
-  margin-top: 1rem;
-}
-
-.data-map__insights div {
-  border: 3px solid var(--ink);
-  border-radius: 14px;
-  background: #fff;
-  padding: .9rem;
-  box-shadow: 5px 6px 0 rgba(26, 26, 31, .12);
-}
-
-.data-map__insights b {
-  display: block;
-  font-family: var(--disp);
-  font-weight: 900;
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  line-height: .9;
-  color: var(--purple);
-}
-
-.data-map__insights span {
-  display: block;
-  margin-top: .4rem;
-  color: var(--muted);
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-
 @media (max-width: 900px) {
   .data-map__tick-label {
     font-size: 11px;
@@ -2119,12 +1985,16 @@ html.lenis, html.lenis body {
 }
 
 @media (max-width: 680px) {
-  .data-map__tooltip {
-    display: none;
+  .tiktok-proof__head {
+    flex-direction: column;
   }
 
-  .data-map__insights {
-    grid-template-columns: 1fr;
+  .tiktok-switch-btn {
+    align-self: flex-start;
+  }
+
+  .data-map__tooltip {
+    display: none;
   }
 
   .data-map__tick-label {
@@ -2133,7 +2003,6 @@ html.lenis, html.lenis body {
 }
 
 /* ===================== TIKTOK 6-TILE NOTES ===================== */
-/* Overrides the default .tiktok-frames layout for the 6 square TikTok tiles. */
 .tiktok-frames--six {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2188,7 +2057,6 @@ html.lenis, html.lenis body {
   stroke-linejoin: round;
 }
 
-/* Top-left tile: ANH LON TRI VO */
 .note-top-left {
   top: -2.15rem;
   left: -1.05rem;
@@ -2198,10 +2066,9 @@ html.lenis, html.lenis body {
   transform: rotate(18deg);
 }
 
-/* Top-middle tile: SCHOOL'S OFFICIAL TIKTOK */
 .note-top-right {
   top: -2.25rem;
-  left: 7rem;
+  left: 6.5rem;
   right: auto;
   flex-direction: row-reverse;
   font-size: clamp(.76rem, 1.2vw, 1rem);
@@ -2211,7 +2078,6 @@ html.lenis, html.lenis body {
   transform: scaleX(-1) rotate(18deg);
 }
 
-/* Top-right tile: CLASS CHAOS */
 .note-right {
   top: 40%;
   right: -9.2rem;
@@ -2222,7 +2088,6 @@ html.lenis, html.lenis body {
   transform: scaleX(-1) rotate(-8deg);
 }
 
-/* Bottom-left tile: MY PERSONA AT SCHOOL */
 .note-left {
   top: 48%;
   left: -14rem;
@@ -2233,18 +2098,16 @@ html.lenis, html.lenis body {
   transform: rotate(-8deg);
 }
 
-/* Bottom-middle tile: OCEAN EDUCATION, below the image and pointing upward */
 .note-bottom-left {
   bottom: -3.25rem;
   left: .35rem;
 }
 
-.note-bottom-right .note-arrow {
+.note-bottom-left .note-arrow {
   transform: rotate(-96deg);
   transform-origin: center;
 }
 
-/* Bottom-right tile: MY PROFESSIONAL CAREER, below the image and pointing upward */
 .note-bottom-right {
   bottom: -3.25rem;
   right: -.35rem;
@@ -2252,17 +2115,15 @@ html.lenis, html.lenis body {
   font-size: clamp(.76rem, 1.2vw, 1rem);
 }
 
-.note-bottom-left .note-arrow {
+.note-bottom-right .note-arrow {
   transform: scaleX(-1) rotate(-96deg);
   transform-origin: center;
 }
 
-/* Give the notes under row 2 real breathing room before the CTA button. */
 .tiktok-frames--six + .tiktok-cta {
   margin-top: 0;
 }
 
-/* Mobile/tablet: keep notes inside the readable flow so they do not spill off-screen. */
 @media (max-width: 760px) {
   .tiktok-frames--six {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2300,33 +2161,8 @@ html.lenis, html.lenis body {
     max-width: 280px;
     margin-bottom: 4.8rem;
   }
-
-  .tiktok-img-note {
-    font-size: 1rem;
-  }
-
-  .note-top-left,
-  .note-top-right,
-  .note-right,
-  .note-left,
-  .note-bottom-left,
-  .note-bottom-right {
-    top: auto;
-    left: .4rem;
-    right: auto;
-    bottom: -2.25rem;
-    flex-direction: row;
-  }
-
-  .note-top-left .note-arrow,
-  .note-top-right .note-arrow,
-  .note-right .note-arrow,
-  .note-left .note-arrow,
-  .note-bottom-left .note-arrow,
-  .note-bottom-right .note-arrow {
-    transform: rotate(-42deg);
-  }
 }
+
 /* ===================== COMMUNITY INITIATIVE ===================== */
 .community-band {
   background: #fff;
@@ -2409,7 +2245,6 @@ html.lenis, html.lenis body {
   stroke-linejoin: round;
 }
 
-/* xen kẽ trên */
 .community-note-top {
   top: -2.15rem;
   left: 50%;
@@ -2420,7 +2255,6 @@ html.lenis, html.lenis body {
   transform: rotate(26deg);
 }
 
-/* xen kẽ dưới */
 .community-note-bottom {
   bottom: -2.5rem;
   left: 50%;
@@ -2463,4 +2297,9 @@ html.lenis, html.lenis body {
   .community-note {
     font-size: 1rem;
   }
+}
+.foot .designed {
+  font-family: "Baloo 2", var(--ui), sans-serif;
+  font-weight: 800;
+  letter-spacing: .02em;
 }
