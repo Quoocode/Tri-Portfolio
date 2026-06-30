@@ -8,7 +8,7 @@ export default function WhyRMIT() {
       </svg>
 
       <div className="wrap">
-        <p className="kicker reveal"><span className="idx">05</span>why rmit</p>
+        <p className="kicker reveal"><span className="idx">06</span>why rmit</p>
         <h2 className="title reveal">What I'll bring<span className="sub">to RMIT.</span></h2>
         <div className="prose reveal">
           <p>
