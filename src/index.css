@@ -2104,7 +2104,7 @@ html.lenis, html.lenis body {
 }
 
 .note-bottom-left .note-arrow {
-  transform: rotate(-96deg);
+  transform: scaleX(-1) rotate(-96deg);
   transform-origin: center;
 }
 
@@ -2116,7 +2116,7 @@ html.lenis, html.lenis body {
 }
 
 .note-bottom-right .note-arrow {
-  transform: scaleX(-1) rotate(-96deg);
+  transform: rotate(-96deg);
   transform-origin: center;
 }
 
