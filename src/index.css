@@ -2256,14 +2256,14 @@ html.lenis, html.lenis body {
 }
 
 .community-note-bottom {
-  bottom: -2.5rem;
-  left: 50%;
+  bottom: -2.55rem;
+  left: 100%;
   transform: translateX(-50%);
   flex-direction: row-reverse;
 }
 
 .community-note-bottom .community-note-arrow {
-  transform: scaleX(-1) rotate(-92deg);
+  transform: scaleX(-1) rotate(-72deg);
   transform-origin: center;
 }
 
