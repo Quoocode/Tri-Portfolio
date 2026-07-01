@@ -66,7 +66,7 @@ export default function CommunityInitiative({ onImageClick }) {
         <p className="lead reveal community-lead">
           Before the high-stakes PTNK entrance exam, I hosted a series of live-streamed
           talks with guests from different specialized classes (Math, Literature,
-          Chemistry, Bio, English). Instead of heavy academic stress, we gave future
+          Biology, English,...). Instead of heavy academic stress, we gave future
           students a real, transparent look into life at a gifted school. It’s proof
           of my ability to build community and spark engagement: turning an exclusive
           world into relatable content that people care about.

@@ -2298,8 +2298,25 @@ html.lenis, html.lenis body {
     font-size: 1rem;
   }
 }
-.foot .designed {
-  font-family: "Baloo 2", var(--ui), sans-serif;
+.name-rmit {
+  color: #e60028;
+}
+
+.about-hero-copy {
+  max-width: 58ch;
+  font-size: clamp(1rem, .9rem + .45vw, 1.22rem);
+  line-height: 1.55;
+}
+
+.about-hero-copy strong {
   font-weight: 800;
-  letter-spacing: .02em;
+}
+/* ===================== VIETNAMESE-SAFE FOOTER FONT ===================== */
+.foot .designed {
+  font-family: "Be Vietnam Pro", var(--ui), sans-serif !important;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.25;
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  color: var(--yellow);
 }

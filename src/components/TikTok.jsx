@@ -106,12 +106,12 @@ export default function TikTok() {
           ) : (
             <div className="tiktok-stats" data-countgroup="true">
               <div className="tstat">
-                <CountUp target={13.4} suffix="M+" />
+                <CountUp target={13.5} suffix="M+" />
                 <span className="lbl">video views</span>
               </div>
 
               <div className="tstat">
-                <CountUp target={15} suffix="K+" />
+                <CountUp target={16} suffix="K+" />
                 <span className="lbl">followers</span>
               </div>
 
@@ -121,7 +121,7 @@ export default function TikTok() {
               </div>
 
               <div className="tstat">
-                <CountUp target={100} suffix="K+" />
+                <CountUp target={20} suffix="K+" />
                 <span className="lbl">hrs watched</span>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function TikTok() {
         </a>
 
         <p className="tiktok-lesson reveal">
-          "attention is engineered, never lucky - hook, tension, release."
+          "attention is engineered, never lucky - hook, buildup, post."
         </p>
       </div>
     </section>
