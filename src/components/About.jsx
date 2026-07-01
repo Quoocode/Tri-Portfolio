@@ -57,22 +57,36 @@ export default function About({ onImageClick }) {
 
         {/* Intro video frame */}
         <div className="video reveal">
-          <div className="frame">
+          <div
+            className="frame video-frame"
+            style={{
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+          >
             {isPlayingVideo ? (
               <iframe
-                src="https://www.youtube.com/embed/3KpxeV_SI2w?autoplay=1"
+                src="https://www.youtube-nocookie.com/embed/pKaHzYJs8IQ?autoplay=1&rel=0&playsinline=1"
                 title="Intro video"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allow="autoplay; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', zIndex: 2 }}
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 0,
+                  zIndex: 2,
+                  background: '#111'
+                }}
               ></iframe>
             ) : (
               <>
                 <div className="vph"></div>
                 <img
                   src="images/intro-cover.webp"
-                  alt=""
+                  alt="Intro video preview"
                   loading="lazy"
                   onError={(e) => e.target.remove()}
                   style={{
@@ -204,15 +218,15 @@ export default function About({ onImageClick }) {
             {/* About 3 Stacked Photos */}
             <div className="about__photos" style={{ marginTop: '1.6rem' }}>
               <div className="frame pink r-2">
-                <FrameImage src="images/about-1.webp" caption="candid" onImageClick={onImageClick} />
+                <FrameImage src="images/about-1.webp" caption="JOB" onImageClick={onImageClick} />
               </div>
 
               <div className="frame blue r3 tall">
-                <FrameImage src="images/portrait.webp" caption="portrait" onImageClick={onImageClick} />
+                <FrameImage src="images/portrait.webp" caption="ANH LON" onImageClick={onImageClick} />
               </div>
 
               <div className="frame green r2">
-                <FrameImage src="images/about-2.webp" caption="creating" onImageClick={onImageClick} />
+                <FrameImage src="images/about-2.webp" caption="COOL" onImageClick={onImageClick} />
               </div>
             </div>
           </div>
@@ -229,19 +243,19 @@ export default function About({ onImageClick }) {
 
           <div className="gallery reveal-stagger reveal">
             <div className="frame yellow r-2">
-              <FrameImage src="images/moment-1.webp" caption="on set" onImageClick={onImageClick} />
+              <FrameImage src="images/moment-1.webp" caption="ON STAGE" onImageClick={onImageClick} />
             </div>
 
             <div className="frame green r2">
-              <FrameImage src="images/moment-2.webp" caption="on stage" onImageClick={onImageClick} />
+              <FrameImage src="images/moment-2.webp" caption="FAN MEETING" onImageClick={onImageClick} />
             </div>
 
             <div className="frame pink r3">
-              <FrameImage src="images/moment-3.webp" caption="the team" onImageClick={onImageClick} />
+              <FrameImage src="images/moment-3.webp" caption="THE TEAM" onImageClick={onImageClick} />
             </div>
 
             <div className="frame blue r-4">
-              <FrameImage src="images/moment-4.webp" caption="game day" onImageClick={onImageClick} />
+              <FrameImage src="images/moment-4.webp" caption="JOB DAY" onImageClick={onImageClick} />
             </div>
           </div>
         </div>

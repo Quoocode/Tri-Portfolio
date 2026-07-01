@@ -111,7 +111,7 @@ export default function TikTok() {
               </div>
 
               <div className="tstat">
-                <CountUp target={16} suffix="K+" />
+                <CountUp target={17} suffix="K+" />
                 <span className="lbl">followers</span>
               </div>
 
@@ -203,7 +203,7 @@ export default function TikTok() {
         </a>
 
         <p className="tiktok-lesson reveal">
-          "attention is engineered, never lucky - hook, buildup, post."
+          "attention is engineered, never luck - hook, buildup, post."
         </p>
       </div>
     </section>
