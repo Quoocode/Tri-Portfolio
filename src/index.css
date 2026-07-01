@@ -2298,6 +2298,11 @@ html.lenis, html.lenis body {
     font-size: 1rem;
   }
 }
+.foot .designed {
+  font-family: "Baloo 2", var(--ui), sans-serif;
+  font-weight: 800;
+  letter-spacing: .02em;
+}
 .name-rmit {
   color: #e60028;
 }
