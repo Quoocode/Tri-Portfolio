@@ -23,7 +23,7 @@ export default function Footer() {
           </svg>
         </a>
       </div>
-      <small>Võ Nguyễn Minh Tri - PTNK · Creator Portfolio 2026</small>
+      <small>Võ Nguyễn Minh Tri - PTNK · Digital Portfolio 2026</small>
     </footer>
   );
 }
