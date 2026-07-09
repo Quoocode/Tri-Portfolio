@@ -111,7 +111,7 @@ export default function TikTok() {
               </div>
 
               <div className="tstat">
-                <CountUp target={17} suffix="K+" />
+                <CountUp target={18} suffix="K+" />
                 <span className="lbl">followers</span>
               </div>
 
